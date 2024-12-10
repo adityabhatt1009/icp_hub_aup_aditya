@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceX</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: #000;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .logo span {
+      color: #e41e26;
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #e41e26;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1547496502-affa22d38866?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&w=1920&fit=max') no-repeat center/cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      padding: 10px 20px;
+      background: #e41e26;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background: #ff4d58;
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>Space<span>X</span></h1>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#missions">Missions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Explore the Final Frontier</h2>
+      <p>Join us as we push the boundaries of space exploration.</p>
+      <a href="#missions" class="btn">Discover More</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About SpaceX</h2>
+      <p>SpaceX designs, develops, and launches some of the most advanced rockets and spacecraft in the world.</p>
+    </section>
+
+    <section id="missions" class="section">
+      <h2>Our Missions</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Falcon 9</h3>
+          <p>A reusable rocket designed for reliable and safe transport to orbit.
+            It is is a partially reusable, human-rated, two-stage-to-orbit, medium-lift launch vehicle[a] designed and manufactured in the United States by SpaceX.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Starship</h3>
+          <p>SpaceX’s Starship spacecraft and Super Heavy rocket – collectively referred to as Starship – represent a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship is the world’s most powerful launch vehicle ever developed, capable of carrying up to 150 metric tonnes fully reusable and 250 metric tonnes expendable.</p>
+        </div>
+        <div class="card">
+          <h3>Dragon</h3>
+          <p>Delivering crew and cargo safely to the International Space Station.The Dragon spacecraft is capable of carrying up to 7 passengers to and from Earth orbit, and beyond. It is the only spacecraft currently flying that is capable of returning significant amounts of cargo to Earth, and is the first private spacecraft to take humans to the space station.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 SpaceX. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
